@@ -1,5 +1,7 @@
 <?php
 
+use App\Solid\SingleResponsibility\PdfFormater;
+use App\Solid\SingleResponsibility\SalesReport;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +17,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+
+Route::get('/sales-report', function () {
+    $salesReport = new SalesReport();
+    $pdfFormater = new PdfFormater();
+
+    return $pdfFormater->formatToPdf($salesReport->export());
 });
