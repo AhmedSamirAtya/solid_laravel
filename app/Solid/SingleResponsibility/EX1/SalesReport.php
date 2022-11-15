@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Solid\SingleResponsibility;
+namespace App\Solid\SingleResponsibility\EX1;
 
 
 class SalesReport{
