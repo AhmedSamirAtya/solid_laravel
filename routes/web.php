@@ -25,36 +25,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-Route::get('/sales-report', function () {
-    $salesReport = new SalesReport();
-    $pdfFormater = new PdfFormater();
-
-    return $pdfFormater->formatToPdf($salesReport->export());
-});
-
-Route::get('/blog-post-json', function () {
-    $post = new BlogPost();
-    $post->setAuthor('ahmed maga');
-    $post->setTitle('single responsibility');
-    $post->setContent('using single responsibility with coheison and coupling');
-
-    $jsonPrinter = new JsonBlogPostPrinter();
-    return $jsonPrinter->print($post);
-});
-
-Route::get('/blog-post-html', function () {
-    $post = new BlogPost();
-    $post->setAuthor('ahmed maga');
-    $post->setTitle('single responsibility');
-    $post->setContent('using single responsibility with coheison and coupling');
-
-    $htmlPrinter = new HtmlBlogPostPrinter();
-    return $htmlPrinter->print($post);
-});
-
-
-
 Route::get('/cat-talk', function () {
     $cat = new Cat();
     $communication = new Communication();
