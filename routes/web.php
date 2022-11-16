@@ -1,5 +1,8 @@
 <?php
 
+use App\Solid\OpenClosedPrinciple\Cat;
+use App\Solid\OpenClosedPrinciple\Communication;
+use App\Solid\OpenClosedPrinciple\Fox;
 use App\Solid\SingleResponsibility\EX1\PdfFormater;
 use App\Solid\SingleResponsibility\EX1\SalesReport;
 use App\Solid\SingleResponsibility\EX2\BlogPost;
@@ -48,4 +51,17 @@ Route::get('/blog-post-html', function () {
 
     $htmlPrinter = new HtmlBlogPostPrinter();
     return $htmlPrinter->print($post);
+});
+
+
+
+Route::get('/cat-talk', function () {
+    $cat = new Cat();
+    $communication = new Communication();
+    return $communication->communicate($cat);
+});
+Route::get('/fox-talk', function () {
+    $fox = new Fox();
+    $communication = new Communication();
+    return $communication->communicate($fox);
 });
