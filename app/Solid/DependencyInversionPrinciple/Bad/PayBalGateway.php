@@ -1,7 +1,7 @@
 <?php 
 
 
-namespace app\Solid\DependencyInversionPrinciple\Bad;
+namespace App\Solid\DependencyInversionPrinciple\Bad;
 
 class PayBalGateway 
 {

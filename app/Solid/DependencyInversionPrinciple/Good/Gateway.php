@@ -1,6 +1,5 @@
 <?php 
-
-namespace app\Solid\DependencyInversionPrinciple\Good;
+namespace App\Solid\DependencyInversionPrinciple\Good;
 
 Interface Gateway 
 {

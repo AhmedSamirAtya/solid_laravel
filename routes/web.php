@@ -1,8 +1,8 @@
 <?php
 
-use app\Solid\DependencyInversionPrinciple\Good\FawryGateway;
-use app\Solid\DependencyInversionPrinciple\Good\PayBalGateway;
-use app\Solid\DependencyInversionPrinciple\Good\PaymentProcess;
+use App\Solid\DependencyInversionPrinciple\Good\FawryGateway;
+use App\Solid\DependencyInversionPrinciple\Good\PayBalGateway;
+use App\Solid\DependencyInversionPrinciple\Good\PaymentProcess;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {

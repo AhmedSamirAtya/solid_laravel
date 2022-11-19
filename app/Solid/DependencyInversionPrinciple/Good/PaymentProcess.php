@@ -1,6 +1,6 @@
 <?php 
 
-namespace app\Solid\DependencyInversionPrinciple\Good;
+namespace App\Solid\DependencyInversionPrinciple\Good;
 
 class PaymentProcess 
 {
